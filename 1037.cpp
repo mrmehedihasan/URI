@@ -3,14 +3,22 @@
 using namespace std;
 
 int main(){
-    int a,b,c,d;
-    cin>>a>>b>>c;
+    double num;
+    cin>>num;
 
-    if(b > c && d > a && (c+d) > (a+b) && c > 0 && d > 0 && a%2 == 0){
-        cout << "Valores aceitos\n";
+    if(num<0){
+        cout << "Fora de intervalo" << endl;
+    }else if(num>=0 && num<=25){
+        cout << "Intervalo [0,25]" << endl;
+    }else if(num>25 && num<=50){
+        cout << "Intervalo (25,50]" << endl;
+    }else if(num>50 && num<=100){
+        cout << "Intervalo (75,100]" << endl;
     }else{
-        cout << "Valores nao aceitos\n";
+        cout << "Fora de intervalo" << endl;
     }
+
+
 
     return 0;
 }
